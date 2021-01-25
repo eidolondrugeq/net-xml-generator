@@ -21,17 +21,14 @@ Description
 -----------
 
 This module consists of a single source file net-xml-generator.cl.
+Currently documentation modifies readtable,
+allowing "normal" Lisp source-code.
+XML-Type plausible-nests markings emit subforms.
+The Tree, Lisp source-code intergrates transparently.Lisp XML collectively creating panoply(an umbrella) of operators (Recurssion, Reasoning-Expressions, Rare Design). Cycloning variations from XML instances. Lisp code now emitting XML parrelling true XML structure.
 
-It provides a modified readtable that allows normal Lisp source code
-to contain possibly-nested marked subforms that emit an XML element.
-The tree that is Lisp source code integrates transparently with the
-tree that is the intended XML, and the entire panoply of Lisp
-operators (iteration, special forms, function calls) can be mixed with
-XML generation.  The Lisp code that emits XML has a structure
-paralleling the XML.
-
-The Common Lisp pretty printer is optionally used to indent the
-emitted XML for human readability.  See the file
+Common Lisp Pretty Printer optionally regards indentations of XML, claryifying human readability. 
+ 
+See the file
 xml-generator-blurb.html distributed along with this module for a
 gentle introduction, and xml-generator-blurb.cl which shows how that
 html file was itself generated using the module.
@@ -47,10 +44,9 @@ Author comments
 Platforms
 ----------
 
-All Allegro Common Lisp versions.  It mostly should work on other
-implementations, but uses the ACL named-readtable facility (which
-could trivially be added to any other implementation) and more
-importantly may depend on subtle details of the pretty printer.
+Allegro Common Lisp intejects fucntion
+implementations. Usingv ACL (Labels regarding readtable functionality). Trivially incrementing urgency, reflecting miscellanous details in the Pretty Printer.
+
 
 Dependencies
 ------------
@@ -61,31 +57,35 @@ The Allegro Common Lisp excl:named-readtable facility.
 
 Installation
 ------------
+//Attachment in current Project 
+Start Lisp and compile && load net-xml-generator.cl:    
 
-Start your lisp and compile and load net-xml-generator.cl which is
-part of this project:
 
     (load (compile-file "/path/to/your/net-xml-generator.cl")
 
-To test, 
+Initialize Test, 
 
     (load "/path/to/your/xml-generator-blurb.cl")
     (generate-this-page :out-path "./xml-generator-blurb-copy.html" )
 
-and that named file will be generated which should be an exact copy of
-xml-generator-blurb.html
+File we create generates clone of xml-generator-blurb.html
+
 
 Configuration
 -------------
 
-No configuration is necessary, but see the documentation in the source
-file how to use the customized readtable in your Lisp code.
+No configuration is necessary
+
+*Visit source file to customise personal Lisp code readtable. 
 
 Documentation
 -------------
 
-The full documentation is contained in block comments in the
-net-xml-generator.cl source file itself.
+Full Documentation Blocks: 
+
+//Source File
+
+net-xml-generator.cl 
 
 License
 -------
